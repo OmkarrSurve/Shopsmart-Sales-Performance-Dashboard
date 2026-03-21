@@ -1,10 +1,5 @@
 # 🛒 ShopSmart — End-to-End Sales Performance Dashboard
 
-![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![Excel](https://img.shields.io/badge/Microsoft%20Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-
 ---
 
 ## 📌 Project Overview
@@ -14,12 +9,6 @@ This is an end-to-end Business Intelligence project simulating the role of a Dat
 The dashboard was built to answer a real business brief from the VP of Sales and is designed to mirror actual day-to-day analyst work in a retail or e-commerce organization.
 
 ---
-
-## 🧾 Business Brief
-
-> **Requested By:** VP of Sales, ShopSmart Retail Inc.
->
-> *"Our overall sales have grown YoY but profitability is declining in certain regions and categories. I need a dashboard that gives leadership a clear view of revenue trends, regional performance, and our top and bottom performing products. I also want to simulate how hitting different growth targets would impact our bottom line. Dashboard needs to be ready for the Monday leadership meeting."*
 
 ### Business Questions Answered
 
@@ -337,7 +326,7 @@ Visuals included:
 
 Visuals included:
 - 4 region-specific KPI cards (North, South, East, West)
-- US Filled Map colored by profit (red = loss, green = profit)
+- US Filled Map colored by profit margin, total revenue, total orders
 - Revenue vs Profit by Region clustered bar chart
 - Profit Margin % by Region with conditional formatting
 - Avg Delivery Days by Region & Ship Mode matrix
@@ -366,9 +355,7 @@ Visuals included:
 - Revenue by Segment & Year line chart with trend lines
 - Customer Count by Segment donut chart
 - Top 10 Most Profitable Customers bar chart
-- RFM Segment bar chart
 - RFM Segment summary matrix (Frequency, Monetary, Recency, Revenue per segment)
-- New vs Repeat Customers area chart
 
 ---
 
@@ -377,11 +364,11 @@ Visuals included:
 
 Visuals included:
 - 2 dynamic sliders — Sales Growth % (0–50%) and Discount Reduction % (0–30%)
-- 4 KPI cards — Current Revenue, Projected Revenue, Revenue Uplift, Projected Profit
+- 4 KPI cards — Total Revenue, Projected Revenue, Revenue Uplift, Projected Profit, Project Profit Margin%
 - Actual vs Projected Revenue by Year clustered bar chart
 - Projected Revenue by Category bar chart
-- Revenue Uplift, Profit Uplift, Margin Difference card trio
-- Scenario Comparison Matrix (Conservative, Moderate, Aggressive, Best Case)
+- Actual vs Projected Profit by Year clustered bar chart
+  
 
 ---
 
@@ -413,19 +400,10 @@ shopsmart-dashboard/
 │   └── superstore_cleaned.csv       ← Cleaned dataset used in Power BI
 │
 ├── sql/
-│   ├── 01_create_table.sql          ← PostgreSQL schema
-│   ├── 02_import_data.sql           ← COPY command for data import
-│   ├── 03_kpi_queries.sql           ← Executive KPI queries
-│   ├── 04_regional_analysis.sql     ← Regional performance queries
-│   ├── 05_product_analysis.sql      ← Category and sub-category queries
-│   ├── 06_customer_analysis.sql     ← Customer segmentation queries
-│   └── 07_discount_analysis.sql     ← Discount impact queries
+│   └── Sqlsales.sql    ← Entire Sql schema along with all the queries
 │
 ├── powerbi/
 │   └── shopsmart_dashboard.pbix     ← Power BI dashboard file
-│
-├── docs/
-│   └── cleaning_log.xlsx            ← Data cleaning documentation
 │
 └── README.md
 ```
@@ -435,41 +413,8 @@ shopsmart-dashboard/
 ## 🚀 How to Run This Project
 
 ### Prerequisites
-- PostgreSQL 14+
+- PostgreSQL 18
 - Power BI Desktop (free)
-- Python 3.8+ (optional, for encoding fix)
-
-### Steps
-
-**1. Clone the repository**
-```bash
-git clone https://github.com/yourusername/shopsmart-dashboard.git
-cd shopsmart-dashboard
-```
-
-**2. Set up PostgreSQL database**
-```bash
-psql -U postgres
-```
-```sql
-CREATE DATABASE shopsmart;
-\c shopsmart
-\i sql/01_create_table.sql
-```
-
-**3. Import data into PostgreSQL**
-```sql
-COPY superstore
-FROM '/your-path/data/superstore_cleaned.csv'
-DELIMITER ',' CSV HEADER ENCODING 'UTF8';
-```
-
-**4. Open Power BI Dashboard**
-- Open `powerbi/shopsmart_dashboard.pbix` in Power BI Desktop
-- If prompted, update data source to your local CSV path
-- Click Refresh
-
----
 
 ## 📌 Skills Demonstrated
 
