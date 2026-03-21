@@ -6,19 +6,6 @@
 
 This is an end-to-end Business Intelligence project simulating the role of a Data Analyst at **ShopSmart Retail Inc.**, a US-based retail company. The project covers the full analyst workflow — from raw data ingestion and SQL analysis to an interactive 5-page Power BI dashboard with dynamic What-If scenario planning.
 
-The dashboard was built to answer a real business brief from the VP of Sales and is designed to mirror actual day-to-day analyst work in a retail or e-commerce organization.
-
----
-
-### Business Questions Answered
-
-1. Which regions and states are most and least profitable?
-2. Which product categories drive revenue vs. which drain profit?
-3. Who are our most valuable customers and how are they segmented?
-4. What happens to revenue and profit if we grow sales by X%?
-5. How is our discount strategy impacting profitability?
-6. Which shipping modes are most efficient and cost-effective?
-
 ---
 
 ## 🗂️ Dataset
@@ -396,8 +383,8 @@ Visuals included:
 shopsmart-dashboard/
 │
 ├── data/
-│   ├── superstore_raw.csv           ← Original Kaggle dataset
-│   └── superstore_cleaned.csv       ← Cleaned dataset used in Power BI
+│   ├── raw_superstore.csv           ← Original Kaggle dataset
+│   └── cleaned_superstore.csv       ← Cleaned dataset used in Power BI
 │
 ├── sql/
 │   └── Sqlsales.sql    ← Entire Sql schema along with all the queries
