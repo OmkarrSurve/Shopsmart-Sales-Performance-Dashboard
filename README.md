@@ -363,7 +363,7 @@ Visuals included:
 **Audience:** Leadership, Strategy Team
 
 Visuals included:
-- 2 dynamic sliders — Sales Growth % (0–50%) and Discount Reduction % (0–30%)
+- Dynamic slider — Sales Growth % (0–50%) 
 - 4 KPI cards — Total Revenue, Projected Revenue, Revenue Uplift, Projected Profit, Project Profit Margin%
 - Actual vs Projected Revenue by Year clustered bar chart
 - Projected Revenue by Category bar chart
